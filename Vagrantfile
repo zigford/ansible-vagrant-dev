@@ -7,6 +7,7 @@ Vagrant.configure("2") do |config|
     libvirt.hyperv_feature :name => 'vapic', :state => 'on'
     libvirt.memory = "1024"
     libvirt.volume_cache = "unsafe"
+    libvirt.disk_bus = "sata"
   end  # The most common configuration options are documented and commented below.
   # find more boxes: https://app.vagrantup.com/boxes/search
 
@@ -16,6 +17,9 @@ Vagrant.configure("2") do |config|
   config.vm.box = "centos/8"
   config.vm.box = "generic/fedora32"
   config.vm.box = "generic/ubuntu2004"
+  config.vm.box = "generic/ubuntu1604"
+  config.vm.box = "roboxes/opensuse15"
+  config.vm.box = "talosthoren/slackware64-14.2"
   config.vm.box = "peru/ubuntu-20.04-desktop-amd64"
 
 
